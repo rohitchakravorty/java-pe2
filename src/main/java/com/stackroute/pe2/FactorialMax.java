@@ -1,12 +1,14 @@
 package com.stackroute.pe2;
 
+/*list all the factorials, that can be expressed as an int*/
 public class FactorialMax  {
 
         public static boolean listIntFactorial()
         {
 
             Long i;
-            for(i=1l;factorial(i)>Long.MIN_VALUE&&factorial(i)<Long.MAX_VALUE;i++) {
+            for(i=1l;factorial(i)>Long.MIN_VALUE&&factorial(i)<Long.MAX_VALUE;i++) //To check overflow of int
+            {
                 if(Long.compareUnsigned(factorial(i),Integer.MAX_VALUE)>0)
                     break;
 
@@ -17,10 +19,11 @@ public class FactorialMax  {
 
 
         }
-        public static boolean listLongFactorial()
+        public static boolean listLongFactorial()    //To check overflow of Long
         {
             Long i;
-            for(i=1l;factorial(i)>Long.MIN_VALUE&&factorial(i)<Long.MAX_VALUE;i++) {
+            for(i=1l;factorial(i)>Long.MIN_VALUE&&factorial(i)<Long.MAX_VALUE;i++)
+            {
                 if(Long.compareUnsigned(factorial(i),Long.MAX_VALUE)>0)
                     break;
 
@@ -34,7 +37,7 @@ public class FactorialMax  {
 
 
 
-        public static Integer factorial(Integer n)
+        public static Integer factorial(Integer n)      //To calculate the factorial
         {
             if(n==1)
                 return 1;

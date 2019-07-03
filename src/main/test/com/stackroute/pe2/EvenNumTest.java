@@ -29,5 +29,11 @@ public class EvenNumTest {
         boolean result=ob.isEven(5);
         assertEquals(false,result);
     }
-
+    @Test
+    public void givenNotIntegerShouldReturErrorMessage()
+    {
+        boolean result=ob.isNumeric("abcd");
+        assertEquals(false,result);
+    }
 }
+

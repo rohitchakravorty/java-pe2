@@ -1,29 +1,12 @@
 package com.stackroute.pe2;
-
-import java.sql.SQLOutput;
-import java.util.Scanner;
-
-public class GradesComputing {
-   /* public static void main(String[] args) {
-        Scanner sc = new Scanner();
-        int numberStudent;
-        System.out.println("Enter number of students :");
-        numberStudent = sc.nextInt();
-        int grades[] = new int[numberStudent];
-        for (int loop = 0; loop < numberStudent; loop++) {
-            System.out.println("Enter the grade for student " + loop);
-            grades[loop] = sc.nextInt();
-        }
-
-        checkAverage(grades);
-        checkMin(grades);
-        checkMax(grades);
-    }
-
-*/
+/*reads number of students and n grades as input (of int
+between 0 and 100, inclusive) and displays the average, minimum and maximum.Your
+program shall check for valid input.*/
 
 
-    public static double checkAverage(int grades[])
+public class GradesComputing
+{
+    public static double checkAverage(int grades[])  //To check the average
     {
         double sum=0;
         for(int loop=0;loop<grades.length;loop++)
@@ -35,7 +18,7 @@ public class GradesComputing {
         return average;
 
     }
-    public static int checkMin(int grades[])
+    public static int checkMin(int grades[])       //To find the minimum number
     {
         int minValue = grades[0];
         for(int loop=1;loop<grades.length;loop++)
@@ -48,7 +31,7 @@ public class GradesComputing {
         }
         return minValue;
     }
-    public static int checkMax(int grades[])
+    public static int checkMax(int grades[])        //To find the maximum number
     {
         int maxValue = grades[0];
         for(int loop=1;loop < grades.length;loop++){
